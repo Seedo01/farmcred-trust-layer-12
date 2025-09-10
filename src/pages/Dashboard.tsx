@@ -19,7 +19,8 @@ import {
   DollarSign,
   Calendar,
   Bell,
-  CheckCircle
+  CheckCircle,
+  Building2
 } from "lucide-react";
 
 const Dashboard = () => {
@@ -45,19 +46,11 @@ const Dashboard = () => {
   };
 
   const handleUpdateFarmData = () => {
-    toast({
-      title: "Farm Data Update",
-      description: "Opening farm data update form...",
-    });
-    // Navigate to farm data update page
+    navigate("/update-farm-data");
   };
 
   const handleEditProfile = () => {
-    toast({
-      title: "Profile Editor",
-      description: "Opening profile editor...",
-    });
-    // Navigate to profile editor
+    navigate("/edit-profile");
   };
 
   const handleCreditScore = () => {
@@ -315,6 +308,10 @@ const Dashboard = () => {
                 <Button variant="outline" className="w-full justify-start" onClick={handleEditProfile}>
                   <User size={16} className="mr-2" />
                   Edit Profile
+                </Button>
+                <Button variant="outline" className="w-full justify-start" onClick={() => navigate("/banks-agribusiness")}>
+                  <Building2 size={16} className="mr-2" />
+                  Banks & Agribusiness
                 </Button>
               </div>
             </Card>

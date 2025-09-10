@@ -11,6 +11,9 @@ import CooperativeDashboard from "./pages/CooperativeDashboard";
 import PortalSelection from "./pages/PortalSelection";
 import LoanApplication from "./pages/LoanApplication";
 import MakePayment from "./pages/MakePayment";
+import UpdateFarmData from "./pages/UpdateFarmData";
+import EditProfile from "./pages/EditProfile";
+import BanksAgribusiness from "./pages/BanksAgribusiness";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/cooperative" element={<CooperativeDashboard />} />
           <Route path="/loan-application" element={<LoanApplication />} />
           <Route path="/make-payment" element={<MakePayment />} />
+          <Route path="/update-farm-data" element={<UpdateFarmData />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/banks-agribusiness" element={<BanksAgribusiness />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
